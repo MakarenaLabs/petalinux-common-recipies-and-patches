@@ -1,0 +1,14 @@
+diff --git a/pseudo_ipc.h b/pseudo_ipc.h
+index caeae5c..d945257 100644
+--- a/pseudo_ipc.h
++++ b/pseudo_ipc.h
+@@ -29,7 +29,7 @@ typedef struct {
+ 	char path[];
+ } pseudo_msg_t;
+ 
+-enum {
++typedef enum {
+ 	PSA_EXEC = 1,
+ 	PSA_WRITE = (PSA_EXEC << 1),
+ 	PSA_READ = (PSA_WRITE << 1),
+

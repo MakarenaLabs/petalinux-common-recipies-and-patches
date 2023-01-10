@@ -1,0 +1,30 @@
+diff --git a/ports/linux/portdefs.h b/ports/linux/portdefs.h
+index d419365..9545550 100644
+--- a/ports/linux/portdefs.h
++++ b/ports/linux/portdefs.h
+@@ -32,3 +32,24 @@ GLIBC_COMPAT_SYMBOL(memcpy,2.0);
+ 
+ #include <linux/capability.h>
+ #include <sys/syscall.h>
++#include <sys/prctl.h>
++#include <linux/seccomp.h>
++
++#ifndef _STAT_VER
++#if defined (__aarch64__)
++#define _STAT_VER 0
++#elif defined (__x86_64__)
++#define _STAT_VER 1
++#else
++#define _STAT_VER 3
++#endif
++#endif
++#ifndef _MKNOD_VER
++#if defined (__aarch64__)
++#define _MKNOD_VER 0
++#elif defined (__x86_64__)
++#define _MKNOD_VER 0
++#else
++#define _MKNOD_VER 1
++#endif
++#endif
+
