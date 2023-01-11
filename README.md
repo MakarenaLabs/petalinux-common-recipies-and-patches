@@ -1,5 +1,7 @@
 # Petalinux common recipies and patches
 
+[MakarenaLabs srl](https://makarenalabs.com)
+
 ## Usage
 merge the meta-user directory into your petalinux project
 
