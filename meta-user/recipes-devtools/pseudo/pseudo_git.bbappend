@@ -8,6 +8,6 @@ SECTION = "PETALINUX/devtools"
 
 FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
 
-SRC_URI += "file://pseudo.patch \
+SRC_URI += " \
 	    file://pseudo-native.patch"
 
